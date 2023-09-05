@@ -97,7 +97,7 @@ class CreateParticles {
 
 		this.data = {
 
-			text: 'JR Hitmen\nHockey',
+			text: 'Dune\nGalaxy',
 			amount: 1500,
 			particleSize: 1,
 			particleColor: 0xffffff,
