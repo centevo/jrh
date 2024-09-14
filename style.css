@@ -1,101 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
-:root {
-  --color-blue: #154084;
-  --color-red: #9d2719;
-  --color-yellow: #d7b418;
-  --color-white: #fff3e7;
-  --color-black: #222222;
-  --box-size: 200px;
-  font-family: "Tilt Warp", sans-serif;
-  color: var(--color-text);
-  background-color: var(--color-black);
+@font-face {
+  font-family: "Le Murmure_Regular";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/Le_Murmure-Regular_web.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/Le_Murmure-Regular_web.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  background-color: black;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
-}
-
-#print_container {
-  padding: 12px;
-  background-color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.title_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
-
-.title {
-  font-size: 5rem;
-  line-height: 5rem;
-  font-weight: 600;
-  letter-spacing: -2px;
-  color: var(--color-black);
-  margin: 0;
-}
-
-.color_pallet {
-  display: flex;
-}
-
-.color_pallet div {
-  width: 20px;
-  height: 20px;
-}
-
-.color_pallet .blue {
-  background-color: var(--color-blue);
-}
-
-.color_pallet .red {
-  background-color: var(--color-red);
-}
-
-.color_pallet .yellow {
-  background-color: var(--color-yellow);
-}
-
-.color_pallet .black {
-  background-color: var(--color-black);
-}
-
-#grid_container {
+  justify-content: center;
   position: relative;
-  width: calc(var(--box-size) * 4);
-  height: calc(var(--box-size) * 4);
+  width: 100%;
+  min-height: 100%;
+  background: black;
+  visibility: hidden;
 }
 
-.cell {
-  position: absolute;
-  pointer-events: none;
-  /* border: 1px solid #ffffff82; */
+svg {
+  width: 100%;
 }
 
-.box {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--box-size);
-  height: var(--box-size);
-  line-height: var(--box-size);
-  cursor: pointer;
-  overflow: hidden;
+.svgText {
+  text-transform: uppercase;
+  font-size: 130px;
+  font-family: "Le Murmure_Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
 }
 
-.box-content {
-  height: 100%;
-  background-color: white;
+.textPath {
+  will-change: transform;
+  fill: white;
+  dominant-baseline: middle;
+  alignment-baseline: central;
+  text-anchor: middle;
+}
+
+.svgBandText {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: verdana;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
 }
